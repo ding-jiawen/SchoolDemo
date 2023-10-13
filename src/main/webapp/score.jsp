@@ -24,14 +24,15 @@
     String t3 = request.getParameter("t3");
     String t4 = request.getParameter("t4");
     String[] test5 = request.getParameterValues("t5");
+    String[] test6 = request.getParameterValues("t6");
     // 统计分数
     int score = 0;
 
     // 不选和选错 0分
-    if(t1 != null && t1.equals("B")) score = score + 20;
-    if(t2 != null && t2.equals("A")) score = score + 20;
-    if(t3 != null && t3.equals("C")) score = score + 20;
-    if(t4 != null && t4.equals("C")) score = score + 20;
+    if(t1 != null && t1.equals("B")) score += 15;
+    if(t2 != null && t2.equals("A")) score += 15;
+    if(t3 != null && t3.equals("C")) score += 15;
+    if(t4 != null && t4.equals("C")) score += 15;
 
     StringBuilder temp = new StringBuilder();
     if(test5 != null){
@@ -42,6 +43,20 @@
         if(answer.equals("AB")) {
             score += 20;
         }else if(answer.contains("C") || answer.contains("D")){}else{
+            score += 10;
+        }
+    }
+
+
+    StringBuilder temp1 = new StringBuilder();
+    if(test6 != null){
+        for (int i = 0; i < test6.length; i++) {
+            temp1.append(test6[i]);
+        }
+        String answer2 = String.valueOf(temp1);
+        if(answer2.equals("BC")) {
+            score += 20;
+        }else if(answer2.contains("A") || answer2.contains("D")){}else{
             score += 10;
         }
     }

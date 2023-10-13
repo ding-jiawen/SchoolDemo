@@ -57,6 +57,13 @@
     <label><input type="checkbox" name="t5" value="B">B.2</label><br>
     <label><input type="checkbox" name="t5" value="C">C.11</label><br>
     <label><input type="checkbox" name="t5" value="D">D.0</label><br>
+
+    2.2+2=()<br>
+    <label><input type="checkbox" name="t6" value="A">A.2</label><br>
+    <label><input type="checkbox" name="t6" value="B">B.4</label><br>
+    <label><input type="checkbox" name="t6" value="C">C.4</label><br>
+    <label><input type="checkbox" name="t6" value="D">D.7</label><br>
+
     <input type="submit" value="交卷">
 </form>
 </body>
